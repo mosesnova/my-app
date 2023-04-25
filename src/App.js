@@ -7,7 +7,8 @@ function App() {
  
   function increment()
   {
-    setCount(count+1);
+    setCount(count+1); // overload
+    
   }
   const test = (()=> {return "State Hooks and Interpolation"});
   test();
