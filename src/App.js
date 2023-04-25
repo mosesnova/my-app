@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState} from 'react';
 
 function App() {
-
-  const test = (()=> {return "State Hooks"});
+  const [count,setCount] = useState(0);
+ 
+  function increment()
+  {
+    setCount(count+1);
+  }
+  const test = (()=> {return "State Hooks and Interpolation"});
   test();
   console.log(test());
   return (
@@ -11,6 +17,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+          
+          <button onClick={increment}>increment{count}</button>
           Edit <code>src/App.js</code> and state Hooks save to reload.
         </p>
         <a
